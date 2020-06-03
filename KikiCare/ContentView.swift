@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+         NavigationView {
         
         ZStack{
             
@@ -27,7 +28,9 @@ struct ContentView: View {
                 }
             }
         }
-    }
+    }.navigationBarBackButtonHidden(true)
+
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -175,7 +178,7 @@ struct Login : View {
     @State var pass = ""
     
     var body : some View{
-        
+       
         VStack{
             
             VStack{
@@ -218,26 +221,30 @@ struct Login : View {
             .cornerRadius(10)
             .padding(.top, 25)
             
-            
-            Button(action: {
-                
-            }) {
-                
+             NavigationLink(destination: HomeView()) {
+       
+               
+                                
+                        
                 Text("LOGIN")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 100)
+                .background(
+                         
+                             LinearGradient(gradient: .init(colors: [Color("Color2"),Color("Color1"),Color("Color")]), startPoint: .leading, endPoint: .trailing)
+                         )
+                         .cornerRadius(8)
+                         .offset(y: -40)
+                         .padding(.bottom, -40)
+                         .shadow(radius: 15)
+            }
                 
-            }.background(
-            
-                LinearGradient(gradient: .init(colors: [Color("Color2"),Color("Color1"),Color("Color")]), startPoint: .leading, endPoint: .trailing)
-            )
-            .cornerRadius(8)
-            .offset(y: -40)
-            .padding(.bottom, -40)
-            .shadow(radius: 15)
-        }
+                
+         }
+                
+        
     }
 }
 

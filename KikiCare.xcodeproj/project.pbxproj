@@ -15,6 +15,8 @@
 		AEA6B75224800AAB0044049A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6B75024800AAB0044049A /* LaunchScreen.storyboard */; };
 		AEA6B75D24800AAC0044049A /* KikiCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6B75C24800AAC0044049A /* KikiCareTests.swift */; };
 		AEA6B76824800AAC0044049A /* KikiCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6B76724800AAC0044049A /* KikiCareUITests.swift */; };
+		AED85E652487E9BA006D459A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED85E642487E9BA006D459A /* HomeView.swift */; };
+		AED85E6724880920006D459A /* AnimalsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED85E6624880920006D459A /* AnimalsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AEA6B76324800AAC0044049A /* KikiCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KikiCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA6B76724800AAC0044049A /* KikiCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KikiCareUITests.swift; sourceTree = "<group>"; };
 		AEA6B76924800AAC0044049A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AED85E642487E9BA006D459A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AED85E6624880920006D459A /* AnimalsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				AEA6B74724800AA80044049A /* SceneDelegate.swift */,
 				AEA6B74924800AA80044049A /* ContentView.swift */,
 				AEA6B74B24800AAB0044049A /* Assets.xcassets */,
+				AED85E642487E9BA006D459A /* HomeView.swift */,
+				AED85E6624880920006D459A /* AnimalsListView.swift */,
 				AEA6B75024800AAB0044049A /* LaunchScreen.storyboard */,
 				AEA6B75324800AAB0044049A /* Info.plist */,
 				AEA6B74D24800AAB0044049A /* Preview Content */,
@@ -268,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEA6B74624800AA80044049A /* AppDelegate.swift in Sources */,
+				AED85E652487E9BA006D459A /* HomeView.swift in Sources */,
+				AED85E6724880920006D459A /* AnimalsListView.swift in Sources */,
 				AEA6B74824800AA80044049A /* SceneDelegate.swift in Sources */,
 				AEA6B74A24800AA80044049A /* ContentView.swift in Sources */,
 			);
