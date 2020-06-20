@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE23F891249E7D87006F83E1 /* AdoptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23F890249E7D87006F83E1 /* AdoptionView.swift */; };
+		AE23F893249E8629006F83E1 /* LostFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE23F892249E8629006F83E1 /* LostFoundView.swift */; };
 		AEA6B74624800AA80044049A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6B74524800AA80044049A /* AppDelegate.swift */; };
 		AEA6B74824800AA80044049A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6B74724800AA80044049A /* SceneDelegate.swift */; };
 		AEA6B74A24800AA80044049A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6B74924800AA80044049A /* ContentView.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE23F890249E7D87006F83E1 /* AdoptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptionView.swift; sourceTree = "<group>"; };
+		AE23F892249E8629006F83E1 /* LostFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostFoundView.swift; sourceTree = "<group>"; };
 		AEA6B74224800AA80044049A /* KikiCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KikiCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA6B74524800AA80044049A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEA6B74724800AA80044049A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				AEA6B74B24800AAB0044049A /* Assets.xcassets */,
 				AED85E642487E9BA006D459A /* HomeView.swift */,
 				AED85E6624880920006D459A /* AnimalsListView.swift */,
+				AE23F892249E8629006F83E1 /* LostFoundView.swift */,
+				AE23F890249E7D87006F83E1 /* AdoptionView.swift */,
 				AEA6B75024800AAB0044049A /* LaunchScreen.storyboard */,
 				AEA6B75324800AAB0044049A /* Info.plist */,
 				AEA6B74D24800AAB0044049A /* Preview Content */,
@@ -275,9 +281,11 @@
 			files = (
 				AEA6B74624800AA80044049A /* AppDelegate.swift in Sources */,
 				AED85E652487E9BA006D459A /* HomeView.swift in Sources */,
+				AE23F891249E7D87006F83E1 /* AdoptionView.swift in Sources */,
 				AED85E6724880920006D459A /* AnimalsListView.swift in Sources */,
 				AEA6B74824800AA80044049A /* SceneDelegate.swift in Sources */,
 				AEA6B74A24800AA80044049A /* ContentView.swift in Sources */,
+				AE23F893249E8629006F83E1 /* LostFoundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

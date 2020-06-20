@@ -17,16 +17,17 @@ struct HomeView: View {
                 AnimalsListView()
              }
             else if self.index == 1{
+                AdoptionView()
                  
              }
              else if self.index == 2{
-                 
+                 LostFoundView()
              }
              else{
                  
              }
              }
-           .padding(.bottom, 320)
+           .padding(.bottom, 0)
             CustomTabs(index: self.$index)
     }
         .background(Color.black.opacity(0.05).edgesIgnoringSafeArea(.top))
@@ -97,7 +98,7 @@ struct CustomTabs : View {
            
         }
         .padding(.horizontal, 35)
-        .padding(.top,220)
+        .padding(.top,0)
         .background(Color.white)
         .clipShape(Cshape())
     }
@@ -106,12 +107,12 @@ struct CustomTabs : View {
 struct Cshape : Shape {
     func path(in rect: CGRect) -> Path {
         return Path{ path in
-            path.move(to: CGPoint(x: 0,y: 220))
+            path.move(to: CGPoint(x: 0,y: 0))
             path.addLine(to: CGPoint(x: 0, y: rect.height))
             path.addLine(to: CGPoint(x: rect.width, y: rect.height))
-             path.addLine(to: CGPoint(x: rect.width, y: 220))
+             path.addLine(to: CGPoint(x: rect.width, y: 0))
             
-            path.addArc(center: CGPoint(x: rect.width / 2, y: 220), radius: 35, startAngle: .zero, endAngle: .init(degrees: 180),clockwise:  true)
+            path.addArc(center: CGPoint(x: rect.width / 2, y: 0), radius: 35, startAngle: .zero, endAngle: .init(degrees: 180),clockwise:  true)
         }
     }
 }

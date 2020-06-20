@@ -1,25 +1,26 @@
 //
-//  AnimalsListView.swift
+//  AdoptionView.swift
 //  KikiCare
 //
-//  Created by Mezri Abdealziz on 6/3/20.
+//  Created by Mezri Abdealziz on 6/20/20.
 //  Copyright © 2020 YAApps. All rights reserved.
 //
 
 import SwiftUI
 
-struct AnimalsListView: View {
+struct AdoptionView: View {
     var body: some View {
-        ListHome()
-    }}
-
-struct AnimalsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        AnimalsListView()
+        ListAdoption()
     }
 }
 
-struct ListHome : View {
+struct AdoptionView_Previews: PreviewProvider {
+    static var previews: some View {
+        AdoptionView()
+    }
+}
+
+struct ListAdoption : View {
     
     // for sticky header view...
     @State var time = Timer.publish(every: 0.1, on: .current, in: .tracking).autoconnect()
@@ -35,15 +36,15 @@ struct ListHome : View {
                 VStack{
                     
                     // Header
+                  
                     
                     GeometryReader{g in
                         
-                        Image("AnimalsPoster")
+                        Image("AdoptionPoster")
                         .resizable()
                         .offset(y: g.frame(in: .global).minY > 0 ? -g.frame(in: .global).minY : 0)
                         .frame(height: g.frame(in: .global).minY > 0 ? UIScreen.main.bounds.height / 2.2 + g.frame(in: .global).minY  : UIScreen.main.bounds.height / 2.2)
                         .onReceive(self.time) { (_) in
-
                             
                             let y = g.frame(in: .global).minY
                             
@@ -65,13 +66,14 @@ struct ListHome : View {
                         }
                         
                     }
+                    
                     .frame(height: UIScreen.main.bounds.height / 2.2)
                         
                     VStack{
                         
                         HStack{
                             
-                            Text("My Pets")
+                            Text("Pets For Adoption")
                                 .font(.title)
                                 .fontWeight(.bold)
                             
@@ -88,9 +90,9 @@ struct ListHome : View {
                         
                         VStack(spacing: 20){
                             
-                            ForEach(data){i in
+                            ForEach(dataAdoption){i in
                                 
-                                CardView(data: i)
+                                CardViewAdoption(data: i)
                             }
                         }
                         .padding(.top)
@@ -103,7 +105,7 @@ struct ListHome : View {
             
             if self.show{
                 
-                TopView()
+                TopViewAdoption()
             }
         })
         .edgesIgnoringSafeArea(.top)
@@ -111,7 +113,7 @@ struct ListHome : View {
 }
 // CardView...
 
-struct CardView : View {
+struct CardViewAdoption : View {
     
     var data : Card
     
@@ -141,7 +143,7 @@ struct CardView : View {
 
 // TopView...
 
-struct TopView : View {
+struct TopViewAdoption : View {
     
     var body: some View{
         
@@ -163,7 +165,7 @@ struct TopView : View {
                         .fontWeight(.bold)
                 }
                 
-                Text("Takes care of your Pets")
+                Text("Meet your new Best Friend Today")
                     .font(.caption)
                     .foregroundColor(.gray)
             }
@@ -174,14 +176,14 @@ struct TopView : View {
         .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top == 0 ? 15 : (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 5)
         .padding(.horizontal)
         .padding(.bottom)
-        .background(BlurBG())
+        .background(BlurBGAdoption())
     }
 }
 
 
 // Blur background...
 
-struct BlurBG : UIViewRepresentable {
+struct BlurBGAdoption : UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIVisualEffectView{
         
@@ -201,7 +203,7 @@ struct BlurBG : UIViewRepresentable {
 // Static data for cards....
 //here get data from database
 
-struct Card : Identifiable {
+struct CardAdoption : Identifiable {
     
     var id : Int
     var image : String
@@ -209,13 +211,13 @@ struct Card : Identifiable {
     var subTitile : String
 }
 
-var data = [
 
-    Card(id: 0, image: "kiki", title: "kiki", subTitile: "Cat"),
-    Card(id: 1, image: "dog", title: "Bolt", subTitile: "Dog"),
-    Card(id: 2, image: "kiki", title: "Fitfata", subTitile: "Cat"),
+ 
+var dataAdoption = [
+
+    Card(id: 0, image: "dog", title: "Rex", subTitile: "Dog"),
+    Card(id: 1, image: "cat3", title: "Fetfeta", subTitile: "Cat"),
+    Card(id: 2, image: "cat3", title: "Fitfata", subTitile: "Cat"),
     Card(id: 3, image: "cat3", title: "Sony", subTitile: "Dog"),
     Card(id: 4, image: "kiki", title: "Kiki", subTitile: "Cat"),
 ]
-
-
